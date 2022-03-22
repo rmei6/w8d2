@@ -1,19 +1,19 @@
-Array.prototype.uniq = () => {
+Array.prototype.uniq = function() {
   const arr = [];
-  // console.log(self)
-  for (let i = 0; i < self.arr.length; i++) {
-    if (!arr.includes(self.arr[i])) {
-      arr.push(self.arr[i]);
+  console.log(this);
+  for (let i = 0; i < this.length; i++) {
+    if (!arr.includes(this[i])) {
+      arr.push(this[i]);
     }
   }
   return arr;
 };
 
-Array.prototype.twoSum = () => {
+Array.prototype.twoSum = function() {
   const arr = [];
-  for (let i = 0; i < self.arr.length-1; i++) {
-    for (let j = i+1; j < self.arr.length; j++) {
-      if (self.arr[i] + self.arr[j] === 0) {
+  for (let i = 0; i < this.length-1; i++) {
+    for (let j = i+1; j < this.length; j++) {
+      if (this[i] + this[j] === 0) {
         arr.push([i,j]);
       }
     }
@@ -21,16 +21,15 @@ Array.prototype.twoSum = () => {
   return arr;
 };
 
-Array.prototype.transpose = () => {
+Array.prototype.transpose = function() {
   const res = [];
-  for(let k = 0; k < self.arr.length; k++){
-    res.push(new Array(self.arr.length));
+  for(let k = 0; k < this.length; k++){
+    res.push(new Array(this.length));
   }
-  for (let i = 0; i < self.arr.length; i++){
-    for (let j = 0; j < self.arr.length; j++){
-      res[i][j] = self.arr[j][i];
+  for (let i = 0; i < this.length; i++){
+    for (let j = 0; j < this.length; j++){
+      res[i][j] = this[j][i];
     }
   }
   return res;
 };
-
